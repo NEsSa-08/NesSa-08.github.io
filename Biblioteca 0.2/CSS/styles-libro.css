@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.circulo {
+    width: 30px;
+    height: 30px;
+    background-color:black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 30px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .header-container{
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 3px solid #000;
+    box-sizing: border-box;
+  }
+  .header-content{
+    display: flex;
+  }
+  .salir{
+    align-items: center;
+    width: 100%;
+  }
+  .salir img{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+  .side-right-container{
+    float: right;
+    width: 100%;
+  }
+  .side-right-content{
+    display: flex;
+    align-items: center;
+    float: right;
+  }
+  .img-logo img{
+    width: 50px;
+    height: 50px;
+  }
+
+  /* CSS PARTE DE LA PORTADA LIBRO Y DESCRIPCION */
+
+    main{
+        
+        margin: 2rem;
+    }
+    .libro-container{
+        margin: auto;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        padding: 20px;
+    }
+    .libro-content{
+justify-items: center;
+        display: flexbox;
+    }
+    .portada-content{
+        display: flex;
+        align-items: center;
+       
+        
+    }
+    .portada {
+        display: flex;
+        border-radius: 100px;
+        max-width: 300px;
+        min-width: 150px;
+        width: 100%;
+        max-height: 450px;
+        min-height: 200px;
+        height: 100%;
+       
+    }
+    .img-portada{
+        width: 100%
+        
+    }
+    .description{
+        margin-left: 5%;
+      
+        max-width: 800px;
+        min-width: 100px;
+        width: 100%;
+        max-height: 800px;
+        min-height: 300px;
+        height: 100%;
+        
+    }
+    .description p{
+        font-size: 90%;
+    }
+    .titulo{
+        margin: 40px;
+    }

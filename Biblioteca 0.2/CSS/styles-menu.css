@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 1);
+}
+ /*header css  */
+ .header-container{
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 3px solid #000;
+    box-sizing: border-box;
+ }
+ .header-content{
+    display: flex;
+    align-items: center;
+ }
+ /* CSS NAV */
+.nav-content{
+    display:none;
+    position: absolute;
+    z-index: 1000;
+    flex-direction: column;
+    background-color: rgba(243, 237, 247, 1);
+    top: 90px;    
+    left: 20px;
+}
+.nav-container .img-barras{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+.nav-content a{
+    border-bottom: 1px solid rgba(202, 196, 208, 1);
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+}
+
+nav a img{
+    float: right;
+    height: 24px;
+    width: 24px;
+}
+.nav-content.mostrar{
+    display: flex;
+}
+
+/* css de la barra de buscador */
+.contenedor-search{
+    width: 100%;
+    justify-items: center;
+  
+}
+.search-container{
+    display: flex;
+    position: relative;
+    max-width: 500px;
+    min-width: 100px;
+    width: 100%;
+    height: 40px;
+}
+.search-content input{
+    border: none;
+    width: 100%;
+    background: none;
+    
+}
+.search-content input[type="search"]:focus{
+    outline: none;
+}
+.search-content{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-items: center;
+    border-radius: 100px;
+    width: 100%;
+    background-color:rgba(236, 230, 240, 1) ;
+}
+.img-search{
+    right: -1px;
+    position: absolute;
+}
+.img-search img{
+    width: 35px;
+    height: 35px;
+}
+
+/* contenido de configuracion CSS */
+.configuration-container{
+    display: flex;
+    position: relative; 
+    
+   
+}
+.configuration-content{
+    
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.configuration-content img{
+    margin-right: 20px;
+}
+.img-notify{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.img-avatar{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+.img-logo{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+/* CSS DEL NAV-CONGURACION */
+.nav-configuration-container{
+    display: none;
+    position: absolute;
+    max-width: 100px;
+        min-width: 70px;
+        width: 100%;
+        top: 90px;
+        right: 60px;
+        background-color: rgba(243, 237, 247, 1);
+}
+    .nav-configuration{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .nav-configuration-container.mostrar{
+        display: flex;
+    }
+    .a-container{
+        display: flex;
+        border-bottom: 1px solid rgba(202, 196, 208, 1);
+    }
+    .a-content{
+        margin: 10px;
+    }
+    .nav-configuration a{
+        text-decoration: none;
+        
+    }
+    .nav-configuration a:visited{
+        color: black;
+    }
+/* CSS seccion libros */
+main{
+   
+    margin: 4rem;
+    height: 100vh;
+    
+}
+main .h2-inicio{
+    font-size: 20px;
+    
+}
+.section-menu{
+    margin: 15px;
+    height: 100%;
+}
+
+/* seccion de recomendacions carrusel */
+.recomendation-container{
+    height: 10rem;
+    
+}
+.recomendation-content{
+    position: relative;
+    background-color: rgba(227, 227, 227, 1);
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.img-arrow{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    
+}
+.arrowLeft{
+left: 0;
+}
+.arrowRight{
+    right: 0;
+}
+/* CSS SECCION LIBROS  */
+.libros-container{
+    margin-top: 2rem;}
+
+.libros-content{
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.libros-card{
+    background-color:aqua;
+    max-width: 200px;
+    min-width: 50px;
+    width: 100%;
+    max-height: 310px;
+    min-height: 100px;
+    height: 100%;
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+}
+.libros-card:hover{
+transform: scale(1.05);
+}
+
+.libros-card img{
+    width: 100%;
+    height: 100%;
+}
+

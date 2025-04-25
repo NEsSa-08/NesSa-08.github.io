@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="CSS/styles-desarrollador.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <button class="back-btn" onclick="window.location.href='menu.html'">←</button>
+    <button class="form active" onclick="mostrarVentana('catalogo')">Gestión de catálogo</button>
+    <button class="form active" onclick="mostrarVentana('form-inventario')">Inventario</button>
+    <button class="form active" onclick="mostrarVentana('form-prestamos')"> Préstamos</button>
+    <button class="form active" onclick="mostrarVentana('form-EstadoDeLibro')">Estado de Libro</button>
+    <button onclick="mostrarVentana('form-Reportes')">Reportes de devoluciones</button>
+    <button onclick="mostrarVentana('form-ad')"> Administración de usuarios</button>
+  </div>
+
+  <div class="main">
+    <div class="top-bar">
+      <div class="menu">
+      
+    <!-- Pantalla principal-->
+    
+
+ <!-- Pantalla Gestión de Catálogo -->
+<div id="catalogo" class="ventana ">
+    <div class="catalogo-tabs">
+      <button onclick="mostrarFormulario('agregar')">Agregar</button>
+      <button  onclick="mostrarFormulario('editar')">Editar</button>
+    </div>
+    <!-- formulario agregar -->
+      <div id="form-agregar" class="formulario active">
+        <h2>Agregar</h2>
+        <form class="form-libro" action="PHP/Gestion_catalogo.php" method="POST" enctype="multipart/form-data" id="form-agregar-libro">
+          <div class="form-row">
+            <input type="text" name="titulo" placeholder="Nombre del libro" required />
+            <input type="text" name="autor" placeholder="Nombre del Autor" required />
+            <input type="text" name="editorial" placeholder="Nombre de la Editorial" required />
+          </div>
+      
+          <select name="seccion" required>
+            <option value="Sección 1">Sección 1</option>
+            <option value="Sección 2">Sección 2</option>
+          </select>
+      
+          <input type="number" name="disponible" placeholder="Disponible" required />
+          <textarea name="descripcion" placeholder="Descripción" required></textarea>
+      
+          <label>
+            Portada del libro
+            <input type="file" name="portada" accept="image/*" required />
+            <img class="img-down" src="assets/download.png" alt="">
+          </label>
+      
+          <button type="submit" name="agregar" class="btn-agregar">Agregar</button>
+        </form>
+      </div>
+      <!-- formulario editar -->
+      <div id="form-editar" class="formulario">
+        <h2>Editar</h2>
+        <form class="form-libro" action="PHP/Gestion_catalogo.php" method="POST" enctype="multipart/form-data" id="form-editar-libro">
+          <div class="form-row">
+            <input type="text" name="id_libro" placeholder="Buscar libro por nombre o ID" required />
+          </div>
+      
+          <div class="form-row">
+            <input type="text" name="titulo" placeholder="Nombre del libro" required />
+            <input type="text" name="autor" placeholder="Nombre del Autor" required />
+            <input type="text" name="editorial" placeholder="Nombre de la Editorial" required />
+          </div>
+      
+          <select name="seccion" required>
+            <option value="Sección 1">Sección 1</option>
+            <option value="Sección 2">Sección 2</option>
+          </select>
+      
+          <input type="number" name="disponible" placeholder="Disponible" required />
+          <textarea name="descripcion" placeholder="Descripción" required></textarea>
+      
+          <label>
+            Portada del libro 
+            <input type="file" name="portada" accept="image/*" />
+            <img class="img-down" src="assets/download.png" alt="">
+          </label>
+      
+          <button type="submit" name="editar" class="btn-agregar">Guardar Cambios</button>
+        </form>
+      </div>
+      
+  </div>
+    
+  <!-- form inventario-->
+   <div id="form-inventario" class="ventana">
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>ID_Inven</th>
+          <th>Id_Libro</th>
+          <th>Cantidad_Total</th>
+          <th>Cantidad Dispo</th>
+          <th>Cantidad Daña</th>
+          <th>Cantidad Per</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+      <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+      <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+      <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+      <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+      <tr><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td></tr>
+      <tr><td>37</td><td>38</td><td>39</td><td>40</td><td>41</td><td>42</td></tr>
+      <tr><td>43</td><td>44</td><td>45</td><td>46</td><td>47</td><td>48</td></tr>
+      <tr><td>49</td><td>50</td><td>51</td><td>52</td><td>53</td><td>54</td></tr>
+      <tr><td>55</td><td>56</td><td>57</td><td>58</td><td>59</td><td>60</td></tr>
+      <tr><td>61</td><td>62</td><td>63</td><td>64</td><td>65</td><td>66</td></tr>
+      <tr><td>67</td><td>68</td><td>69</td><td>70</td><td>71</td><td>72</td></tr>
+      </tbody>
+    </table>
+   </div>
+  <!-- form prestamos-->
+  <div id="form-prestamos" class="ventana">
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>ID-Pres</th>
+          <th>Id_usuario</th>
+          <th>id_libro</th>
+          <th> fecha ini</th>
+          <th>fecha dev</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+      <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+      <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+      <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+      <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+      <tr><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td></tr>
+      <tr><td>37</td><td>38</td><td>39</td><td>40</td><td>41</td><td>42</td></tr>
+      <tr><td>43</td><td>44</td><td>45</td><td>46</td><td>47</td><td>48</td></tr>
+      <tr><td>49</td><td>50</td><td>51</td><td>52</td><td>53</td><td>54</td></tr>
+      <tr><td>55</td><td>56</td><td>57</td><td>58</td><td>59</td><td>60</td></tr>
+      <tr><td>61</td><td>62</td><td>63</td><td>64</td><td>65</td><td>66</td></tr>
+      <tr><td>67</td><td>68</td><td>69</td><td>70</td><td>71</td><td>72</td></tr>
+      </tbody>
+    </table>
+   </div>
+  <!-- form estado de libro-->
+  <div id="form-EstadoDeLibro" class="ventana">
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>ID-ticket</th>
+          <th>Id_usuario</th>
+          <th>id_libro</th>
+          <th> fecha dev</th>
+          <th>estado </th>
+          <th>Estatus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+      <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+      <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+      <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+      <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+      <tr><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td></tr>
+      <tr><td>37</td><td>38</td><td>39</td><td>40</td><td>41</td><td>42</td></tr>
+      <tr><td>43</td><td>44</td><td>45</td><td>46</td><td>47</td><td>48</td></tr>
+      <tr><td>49</td><td>50</td><td>51</td><td>52</td><td>53</td><td>54</td></tr>
+      <tr><td>55</td><td>56</td><td>57</td><td>58</td><td>59</td><td>60</td></tr>
+      <tr><td>61</td><td>62</td><td>63</td><td>64</td><td>65</td><td>66</td></tr>
+      <tr><td>67</td><td>68</td><td>69</td><td>70</td><td>71</td><td>72</td></tr>
+      </tbody>
+    </table>
+   </div>
+   <!--form reportes de devolucion-->
+
+   <div id="form-Reportes" class="ventana">
+    <h1>Reportes de devolucion</h1>
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th>ID-Dev</th>
+          <th>Id_ticket</th>
+          <th>id_usuario</th>
+          <th> id_libro</th>
+          <th>fecha ini </th>
+          <th>fecha dev</th>
+          <th>dias de re</th>
+          <th>estado</th>
+          <th>Multa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+    <tr><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+    <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td></tr>
+    <tr><td>28</td><td>29</td><td>30</td><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td></tr>
+    <tr><td>37</td><td>38</td><td>39</td><td>40</td><td>41</td><td>42</td><td>43</td><td>44</td><td>45</td></tr>
+    <tr><td>46</td><td>47</td><td>48</td><td>49</td><td>50</td><td>51</td><td>52</td><td>53</td><td>54</td></tr>
+      </tbody>
+    </table>
+    <button>Reporte</button>
+   </div>
+   <!-- FORMULARIO DE ADMINISTRACION DE USUARIOS -->
+    <div class="ventana main" id="form-ad">
+      <section  class="section-crearUsuario" id="ventana">
+        <div class="crearUsuario-content content-ad">
+          <div class="titulo ">
+            <h2>CREAR USUARIO</h2>
+          </div>
+         <div class="inputscrud-container">
+          <div class="input">
+            <h3>Nombre</h3>
+            <input type="text" placeholder="Nombre Completo"> 
+          </div>
+          <div class="input">
+            <h3>Correo</h3>
+            <input type="text" placeholder="Correo"> 
+          </div>
+          <div class="input">
+            <h3>Telefono</h3>
+            <input type="text" placeholder="Telefono"> 
+          </div>
+          <div class="input">
+            <h3>Rol</h3>
+            <input type="text" placeholder="Rol"> 
+          </div>
+          <div class="input">
+            <h3>Contraseña</h3>
+            <input type="text" placeholder="Contraseña"> 
+          </div>
+          <div class="btn-crear-container btn-container">
+            <button class="btn-crear btn-negro"> Crear</button>
+          </div>
+          
+          
+          
+        </div>
+      </section>
+      <!-- seccion editar usuario -->
+       <section class="section-editarUsuario">
+        <div class="editar-content content-ad">
+          <div class="titulo">
+            <h2>EDITAR USUARIO</h2>
+          </div>
+          <div class="inputsEditar-container inputs-container">
+            <div class="input-editar ">
+                <h3>Nombre</h3>
+                <input type="text" placeholder="Nombre Completo"> 
+              </div>
+              <div class="input-editar">
+                <h3>Correo</h3>
+                <input type="text" placeholder="Correo"> 
+              </div>
+              <div class="input-editar">
+                <h3>Telefono</h3>
+                <input type="text" placeholder="Telefono"> 
+              </div>
+              <div class="input-editar">
+                <h3>Rol</h3>
+                <input type="text" placeholder="Rol"> 
+          </div>
+          <div class="input-editar">
+            <h3>Contraseña</h3>
+            <input type="text" placeholder="Contraseña"> 
+          </div>
+          <div class="btn-container">
+            <button class="btn-negro"> Editar</button></div>
+          
+        </div>
+        
+       </section>
+       <!-- seccion eliminar o desactivar -->
+        <section class="section-EliminarUsuario">
+          <div class="eliminar content-ad">
+            <div class="titulo">
+              <h2>ELIMINAR O DESACTIVAR</h2>
+            </div>
+            <div class="inputsEliminarr-container inputs-container">
+              <div class="input-eliminar">
+                  <h3>Nombre</h3>
+                  <input type="text" placeholder="Nombre Completo"> 
+                </div>
+                <div class="input-eliminar">
+                  <h3>Correo</h3>
+                  <input type="text" placeholder="Correo"> 
+                </div>
+                <div class="input-eliminar">
+                  <h3>Telefono</h3>
+                  <input type="text" placeholder="Telefono"> 
+                </div>
+                <div class="input-eliminar">
+                  <h3>Rol</h3>
+                  <input type="text" placeholder="Rol"> 
+                </div>
+            <div class="input-eliminar">
+              <h3>Contraseña</h3>
+              <input type="text" placeholder="Contraseña"> 
+            </div>
+            <div class="btn-container">
+              <button class="btn-negro">  Eliminar</button>
+              <button class="btn-negro">Desactivar</button>
+            </div>
+          </div>
+          
+          
+          
+        </section>
+    </div>
+      
+   <script src="scripts/validacion_catalogo.js"></script>
+</body>
+</html>

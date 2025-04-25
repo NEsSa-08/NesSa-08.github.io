@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    padding:0;
+    background-color: #333;
+  }
+  
+  .sidebar {
+    background: #333;
+    padding: 10px;
+    width: 220px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar button {
+    background: #bcb6b6;
+    border: none;
+    margin-bottom: 5px;
+    padding: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .back-btn {
+    background: none;
+    font-size: 24px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .main {
+    background: white;
+    padding: 20px;
+    position: relative;
+    width: 90%;
+    
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu {
+    position: relative;
+  }
+  
+  .user-btn {
+    background: none;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    display: inline-block;
+    padding: 10px;
+    background: #f5ecff;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
+  .logo-small {
+    width: 50px;
+  }
+  
+  .logo-main {
+    width: 200px;
+    display: block;
+    margin: 100px auto;
+  }
+  
+  
+  .catalogo-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .catalogo-tabs .tab {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .catalogo-tabs .tab.active {
+    background: #bcb6b6;
+  }
+  
+  .form-libro {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .form-libro input[type="text"],
+  .form-libro input[type="number"],
+  .form-libro select,
+  .form-libro textarea {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .form-libro textarea {
+    resize: vertical;
+    height: 80px;
+  }
+  
+  label input[type="file"] {
+    display: none;
+  }
+  
+  label {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  .img-down{
+    width: 20px;
+    height: 20px;
+  }
+  
+  .btn-agregar {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100px;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  .formulario {
+    display: none;
+  }
+  
+  .formulario.active {
+    display: block;
+  }
+
+   /*inventario*/
+
+  .tabla{
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px auto;
+  }
+  
+  th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  /*prestamos*/
+  
+  /* VENTANAS HIDDEN */
+  .ventana{
+    display: none;
+  }
+/* ADMMINISTRACION DE USUARIO CSS*/
+/* crear usuario */
+section{
+  max-width: 800px;
+  min-width: 200px;
+  width: 100%;
+  margin-bottom: 3rem;
+  border-top: 2px solid black;
+  
+}
+.crearUsuario-content, .content-ad{
+  display: flexbox;
+  width: 100%;
+}
+
+.btn-crearUsuario .btn-feo{
+  width: 100%;
+}
+.btn-crearUsuario button, .btn-feo{
+  margin-right: 10px;
+  cursor: pointer;
+  width: auto;
+  height: 50px;
+  background-color: rgba(217, 217, 217, 1);
+  border-style: none;
+  
+}
+.inputscrud-container ,.inputs-container{
+  display: flex;
+ flex-wrap: wrap;
+  
+}
+.inputscrud-container .input
+,.inputs-container .input-editar,
+ .inputs-container .input-eliminar{
+ margin-right: 20px;
+}
+.inputscrud-container .input input
+,.inputs-container .input-editar input
+, .inputs-container .input-eliminar input{
+  border:1px solid  #333;
+  border-radius: 8px;
+  height: 30px;
+  width: 200px;
+}
+.btn-crear-container,.btn-container{
+  display: flex;
+  align-items:end;
+}
+.inputscrud-container .btn-crear, .btn-negro{
+  margin-right: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  width: auto;
+  height: 40px;
+  background-color: rgba(44, 44, 44, 1);
+}
+
+
+
+/* editar usuario */
+
+
+.botones-container{
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+}
+
+/*  eliminiar usuario */
+
+.btn-container{
+  margin-top: 1rem;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro</title>
+    <link rel="stylesheet" href="CSS/styles-libro.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="header-content">
+            <div class="salir">
+                <img src="assets/assets_libro/arrow-back.png" onclick="window.location.href='menu.html'" alt='flecha de regreso'>
+            </div>
+            <div class="side-right-container">
+                <div class="side-right-content"> 
+                    <div class="circulo div-margin" id="contador">0</div>
+                    <div class="img-logo div-margin">
+                        <img src="assets/logoBiblioteca.jpeg" alt="logoBiblioteca">
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+
+    </header>
+    <main>
+        <section class="libro-container">
+            <div class="libro-content">
+                <div class="titulo"> <h2>Titulo del libro</h2></div>
+                <div class="portada-container">
+                    <div class="portada-content">
+                        <div class="portada part">
+                            <img class="img-portada " src="assets/assets_menu/libro-la-sortija-medora.png" alt="portada de libro">
+                        </div>
+                        <div class="description part ">
+                            <p><b>La Sortija de Médora</b><br>
+                                <b>Autora:</b> Valeria Carolina Caraballo<br><br>
+                                
+                                En una tierra envuelta por secretos ancestrales y leyendas olvidadas,<br>
+                                una joya emerge como símbolo de poder, traición y destino.<br>
+                                La Sortija de Médora es mucho más que un anillo:<br>
+                                es la llave que conecta mundos, une pasados prohibidos<br>
+                                y despierta fuerzas que jamás debieron ser tocadas.<br><br>
+                                
+                                A través de una narración envolvente y personajes profundamente humanos,<br>
+                                Valeria Carolina Caraballo nos guía por un viaje de descubrimiento, magia<br>
+                                y decisiones que cambiarán para siempre el rumbo de quienes se atrevan a usar la sortija.<br><br>
+                                
+                                ¿Estás listo para descubrir el secreto que esconde Médora?</p>
+                        </div>
+                    </div>   
+                </div>
+                <button id="sumar">Reservar Libro</button>
+            </div>
+            
+        </section>
+    </main>
+    
+    <script src="scripts/script-libro.js"></script>
+</body>
+</html>

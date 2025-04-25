@@ -1,0 +1,160 @@
+.righteous-regular {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.header-container{
+    display: flex;
+    position: relative;
+    height: 13rem;
+    width: 100vw;
+    padding: 1rem;
+}
+.headerLogo{
+display: flex;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    align-items: center;
+}
+.headerLogo img{
+width: 6rem;
+height: 6rem;
+}
+.headerLogo h1{
+    margin-left: 1rem;
+    font-size: 38px;
+}
+.headerTitulo{
+    margin-right: 1rem;
+    position: absolute;
+bottom: 10px;
+right: 40px;
+
+
+}
+.headerTitulo h2{
+    font-family: "Righteous", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    bottom: 10px;    
+    right: 10px; 
+}
+.botones-container{
+    display: flex ;
+    flex-direction: column;
+
+    margin: 1rem 5rem 1rem 5rem;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.botonSesion{
+    margin-bottom: 3rem;
+    border-radius: 100px;
+    width: 330px;
+    height: 138px;
+    background-color: #F7F2FA;
+    border: none;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 24px;
+    color: #65558F;
+    transition: all 0.3s ease;
+    list-style: none;
+}
+.botonSesion:hover{
+    background-color: #ece3ee;
+}
+.body-registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.registro-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 35%;
+    height: 75%;
+    border-radius: 100px;
+    padding: 5px;
+    border:1px solid #CAC4D0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 2px 5px 4px rgba(0, 0, 0, .25);
+}
+.registro-container:hover{
+    background-color: #e0cbf67c;
+}
+
+.registro-contenido{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.registro-contenido h1{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    
+}
+.registro-campos{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 0 10px 0 10px;
+}
+
+.img-registro{
+    width: 20px;
+    height: 20px;
+}
+.input{
+    display: inline;
+}
+.input input{
+  margin-left: 1rem;
+  margin-right: 1rem ;
+  background-color: transparent;
+width: 85%;
+border: none;
+outline: none;
+font-size: 20px;
+
+}
+.linea{
+    background-color: #403A3A;
+    width: 100%;
+    height: 1px;
+}
+.registro-contenido button{
+    margin: 0 22%;
+    width: 300px;
+    height: 45px;
+    background-color: #65558F;
+    color: #FFFFFF;
+    border-radius: 100px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.registro-contenido button:hover{
+    background-color: #72609e;
+    cursor: pointer;
+}
+
+
+
